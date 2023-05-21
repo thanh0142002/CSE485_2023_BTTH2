@@ -18,7 +18,7 @@
 
     // Connect to database
     try {
-        $conn = new PDO("mysql:host=localhost;dbname=btth02", 'root', '');
+        $conn = new PDO("mysql:host=localhost;dbname=btth02", 'root', '17102002');
     } catch (PDOException $pe) {
         die("Could not connect to the database $dbname :" . $pe->getMessage());
     }
@@ -86,7 +86,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' ){
 </head>
 <body>
     <!--Title-->
-    <h3 class="text-center text-uppercase text-primary">Điểm Danh Sinh Viên</h3>
+    <h3 class="text-center text-uppercase text-danger">Điểm Danh Sinh Viên</h3>
 
     <!--Attendance-->
     <div class="container">
@@ -119,7 +119,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' ){
         
     </div>
    
-    <button type="submit" class="mt-3 btn btn-primary">Submit</button>
+    <button type="submit" class="mt-3 btn btn-danger">Submit</button><br>
+    <button style="margin-top:20px" class="btn btn-danger" name="thoat"><a  style="text-decoration: none;color:white;" href="../Login/index.php">Thoát</a></button>
     <p class= "text-danger"><?=$Noti?></p>
     </form>
     </div>
@@ -128,7 +129,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' ){
     <!--Navigate to the showInformationAttendance.php-->
     <div class="container mt-5">
         <div class="text-center">
-            <a href="showInformationAttendance.php">Xem thông tin điểm danh</a>
+            <a style="text-decoration: none;color:red"; href="showInformationAttendance.php">Xem thông tin điểm danh</a>
         </div>
     </div>
 
