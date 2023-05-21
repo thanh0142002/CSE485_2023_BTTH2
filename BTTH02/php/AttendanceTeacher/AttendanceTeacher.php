@@ -2,7 +2,7 @@
 try {
     $dsn = "mysql:host=localhost;dbname=btth02";
     $username = "root";
-    $password = "17102002";
+    $password = "";
     
     $connection = new PDO($dsn, $username, $password);
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -41,7 +41,7 @@ try {
                     ?>
                 </select>
                 <button class="btn btn-danger" name="submit">Submit</button>
-                <button  class="btn btn-danger" name="thoat"><a  style="text-decoration: none;color:white;" href="../Login/index.php">Thoát</a></button>
+                <button  class="btn btn-danger" name="thoat"><a  style="text-decoration: none;color:white;" href="index.php">Thoát</a></button>
             </div>
         </form>
 
